@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8">
+  <title>Spanish Phrases</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  aside {
+    background-color: #fff;
+    background-image: linear-gradient(#E50606, #E30558);
+  }
+  .shadow {
+    box-shadow: 6px 0 10px 0 rgba( 0, 0, 0, .2 );
+  }
+  .flex-reverse {
+    flex-direction: row-reverse;
+  }
+  .card {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    -webkit-transition: all .1s cubic-bezier(.77, 0, .175, 1);
+    transition: all .1s cubic-bezier(.77, 0, .175, 1)
+  }
+  .card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    -webkit-transition: all .1s cubic-bezier(.77, 0, .175, 1);
+    transition: all .1s cubic-bezier(.77, 0, .175, 1)
+  }
+  .flip-container {
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		perspective: 1000;
+
+		-moz-transform: perspective(1000px);
+		-moz-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+  	}
+
+  .flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  .flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
+	.flip-container, .front, .back {
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 24px;
+    border-radius: .5rem;
+	}
+
+	.flipper {
+		-webkit-transition: 0.6s;
+		-webkit-transform-style: preserve-3d;
+		-ms-transition: 0.6s;
+
+		-moz-transition: 0.6s;
+		-moz-transform: perspective(1000px);
+		-moz-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+
+		transition: 0.6s;
+		transform-style: preserve-3d;
+
+		position: relative;
+	}
+
+	.front, .back {
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform: rotateY(0deg);
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+    padding: 2rem;
+
+	}
+
+	.front {
+		-webkit-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+		background: #fff;
+		z-index: 2;
+	}
+
+	.back {
+		background: #fff;
+		-webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+	}
+  </style>
+  <body class="bg-near-white">
+    <section class="bg-white w-100 pa2">
+      <p class="black tc">
+        Site under construction. 🚧 Thank you for your patience!
+      </p>
+    </section>
+    <header class="bg-black w-100 ph3 pv3 ph5-l flex flex-reverse">
+      <a href="#" class="link dim white ml3">
+         <svg class="db w1 h1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/>
+         </svg>
+      </a>
+      <a href="https://www.facebook.com/spanishphrases/" class="link dim white ml3">
+          <svg class="db w1 h1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fill-rule="nonzero"/>
+          </svg>
+        </a>
+      <a href="#" class="link white tc">
+        spanishphrases.org
+      </a>
+    </header>
+    <article class="flex flex-column-ns min-vh-100">
+      <section class="flex flex-auto-ns flex-row-ns flex-column w-100">
+        <aside class="flex-none-ns flex-auto w-25-ns pt5-ns order-0 shadow">
+          <h1 class="f-5-l f1 lh-title tc rotate-270-ns mv5-ns">
+            <a href="/" class="white link">
+              Spanish Phrases
+            </a>
+          </h1>
+          <nav class="f6 fw6 ttu tracked pb4-ns pt4-ns lh-copy flex flex-wrap justify-center">
+            <a class="black-60 hover-white mh3" href="#" title="Home">Home</a>
+            <a class="black-60 hover-white mr3" href="#" title="About">About</a>
+            <a class="black-60 hover-white mr3" href="#" title="Learn">Learn</a>
+          </nav>
+          <p class="f3-ns f4 white tc ma0 ph2 pt3">
+            Subscribe to our email list.
+          </p>
+          <form class="center pa4 br2-ns">
+            <fieldset class="cf bn ma0 pa0">
+              <label class="clip" for="email-address">Email Address</label>
+              <input class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 br2 br--top tc" placeholder="Enter Email Address" type="text" name="email-address" value="" id="email-address">
+              <input class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 br2-ns br--bottom-ns" type="submit" value="Subscribe">
+            </fieldset>
+          </form>
+        </aside>
+        <main class="flex-auto order-1 sans-serif">
+          <article class="ma2 ph4 pt4">
+            <h1 class="f3 f2-m f1-l">Welcome</h1>
+            <p class="f6 lh-copy measure">
+              <b>SpanishPhrases.org</b> was created to help people learn a new language, particularly Spanish or español. The hardest part of remembering the different phrases and spelling of the words is not having a visual to look at from time to time. All feedback is welcomed.
+            </p>
+            <p class="f6 lh-copy measure">
+              If you have any suggestions for new phrases or words you would like seen on the site, <a href="#" class="black dim">tweet at me</a>.
+            </p>
+          </article>
+            <section class="fl w-100 w-50-ns">
+              <article class="pa3">
+                <h1 class="f2 bg-black ph4 pv2 white">Questions</h1>
+                <ul class="list pl0">
+                  <li>
+                    <div class="flip-container">
+                  		<div class="flipper">
+                  			<div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 light-red">#001</h1>
+                          <b class="f3 mb2">¡Hola! ¿Comó estás?</b>
+                  			</div>
+                  			<div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#001</h1>
+                          <b class="f3 mb2">Hello! How are you?</b>
+                  			</div>
+                  		</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                  		<div class="flipper">
+                  			<div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 light-red">
+                            #002
+                          </h1>
+                          <b class="f3 mb2">
+                            ¿Cuál es su nombre?
+                          </b>
+                  			</div>
+                  			<div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#002</h1>
+                          <b class="f3 mb2">What is your name?</b>
+                  			</div>
+                  		</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                  		<div class="flipper">
+                  			<div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-red">#003</h1>
+                          <b class="db f3 mb2">¿De donde eres?</b>
+                  			</div>
+                  			<div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#003</h1>
+                          <b class="f3 mb2">Where are you from?</b>
+                  			</div>
+                  		</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-red">#004</h1>
+                          <b class="db f3 mb2">¿Dónde está el baño?</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#004</h1>
+                          <b class="f3 mb2">Where is the bathroom?</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-red">#005</h1>
+                          <b class="db f3 mb2">¿Donde trabajas?</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#005</h1>
+                          <b class="f3 mb2">Where do you work?</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-red">#006</h1>
+                          <b class="db f3 mb2">¿En qué trabajas?</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#006</h1>
+                          <b class="f3 mb2">What do you do for work?</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-red">#007</h1>
+                          <b class="db f3 mb2">¿Cuanto tiempo has trabajado allí?</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#007</h1>
+                          <b class="f3 mb2">How long have you worked there?</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-red">#008</h1>
+                          <b class="db f3 mb2">¿Te gusta trabajar allí?</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#008</h1>
+                          <b class="f3 mb2">Do you enjoy working there?</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-red">#009</h1>
+                          <b class="db f3 mb2">¿Cuándo vas a dormir por la noche?</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#009</h1>
+                          <b class="f3 mb2">When do you go to sleep at night?</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-red">#010</h1>
+                          <b class="db f3 mb2">¿A qué hora te levantas por la mañana?</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#010</h1>
+                          <b class="f3 mb2">What time do you wake up in the morning?</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </article>
+            </section>
+            <section class="fl w-100 w-50-ns">
+              <article class="pa3">
+                <h1 class="f2 bg-black ph4 pv2 white">Exclamations</h1>
+                <ul class="list pl0">
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#011</h1>
+                          <b class="db f3 mb2">¡Felicitaciones! ¡Feliz cumpleaños!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#011</h1>
+                          <b class="f3 mb2">Congratulations! Happy Birthday!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#012</h1>
+                          <b class="db f3 mb2">¡Por supuesto!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#012</h1>
+                          <b class="f3 mb2">Of course!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#013</h1>
+                          <b class="db f3 mb2">¡Alguien por favor ayúdame!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#013</h1>
+                          <b class="f3 mb2">Someone please help me!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#014</h1>
+                          <b class="db f3 mb2">¡Llame al médico!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#014</h1>
+                          <b class="f3 mb2">Call a doctor!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#015</h1>
+                          <b class="db f3 mb2">¡Vamos al cine!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#015</h1>
+                          <b class="f3 mb2">Let's go to the movies!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#016</h1>
+                          <b class="db f3 mb2">¡Cállate y bésame ya!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#016</h1>
+                          <b class="f3 mb2">Shut up and kiss me already!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#017</h1>
+                          <b class="db f3 mb2">¡Gracias por darme esta opportunidad!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#017</h1>
+                          <b class="f3 mb2">Thank you for giving me this opportunity!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#018</h1>
+                          <b class="db f3 mb2">¡Deberías acompañarnos a cenar esta noche!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#018</h1>
+                          <b class="f3 mb2">You should join us for dinner tonight!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#019</h1>
+                          <b class="db f3 mb2">¡Sí, quiero ir de compras!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#019</h1>
+                          <b class="f3 mb2">Yes, I want to go shopping!</b>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front card">
+                          <h1 class="f4 f2-l fw7 mt0 light-purple">#020</h1>
+                          <b class="db f3 mb2">¡Espera, deberías ir con nosotros a la tienda!</b>
+                        </div>
+                        <div class="back card">
+                          <h1 class="f4 f2-l fw7 mt0 mb3">#020</h1>
+                          <b class="f3 mb2">Wait, you should go with us to the store!</b>
+                        </div>
+                      </div>
+                    </section>
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </article>
+        </main>
+      </section>
+    <footer class="bg-lightest-blue navy ph4 w-100">
+      <article class="ph5-ns ph3 pt4">
+        <h1 class="f3 f2-m f1-l">Learn the Spanish Alphabet</h1>
+        <p class="f5 lh-copy measure">
+          The Spanish Alphabet is very similar to the United States. Each of the symbols below will provide an example of how to speak them in the correct dialect. <b>Simply click on any and the sound will play</b>.
+        </p>
+      </article>
+      <section class="flex flex-wrap justify-center ph4-ns ph3 pt4-ns pb6-ns pv3">
+        <div class="w-30-ns w-100 mr3-ns">
+          <h1 class="f2-ns f4 bg-navy b ph4 pv2 white tc">
+            Uppercase
+          </h1>
+          <div class="flex-wrap justify-around ph3 pv2">
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="A">A</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="B">B</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="C">C</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="D">D</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="E">E</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="F">F</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="G">G</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="H">H</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="I">I</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="J">J</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="K">K</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="L">L</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="M">M</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="N">N</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="O">O</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="P">P</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="Q">Q</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="R">R</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="S">S</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="T">T</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="U">U</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="V">V</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="W">W</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="X">X</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="Y">Y</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="Z">Z</a>
+          </div>
+        </div>
+        <div class="w-30-ns w-100 mr3-ns">
+          <h1 class="f2-ns f4 bg-navy b ph4 pv2 white tc">
+            Lowercase
+          </h1>
+          <div class="flex flex-wrap justify-around ph3 pv2">
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="a">a</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="b">b</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="c">c</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="d">d</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="e">e</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="f">f</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="g">g</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="h">h</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="i">i</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="j">j</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="k">k</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="l">l</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="m">m</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="n">n</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="o">o</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="p">p</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="q">q</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="r">r</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="s">s</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="t">t</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="u">u</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="v">v</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="w">w</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="x">x</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="y">y</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="z">z</a>
+          </div>
+        </div>
+        <div class="w-30-ns w-100">
+          <h1 class="f2-ns f4 bg-navy b ph4 pv2 white tc">
+            Numerals
+          </h1>
+          <div class="flex flex-wrap justify-around ph3 pv2">
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="1">1</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="2">2</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="3">3</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="4">4</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="5">5</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="6">6</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="7">7</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="8">8</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="9">9</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="10">10</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="11">11</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="12">12</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="13">13</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="14">14</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="15">15</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="16">16</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="17">17</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="18">18</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="19">19</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="20">20</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="30">30</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="40">40</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="50">50</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="60">60</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="70">70</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="80">80</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="90">90</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="100">100</a>
+            <a class="link hover-white navy f5 f3-ns mr2 mb1" href="#" title="1,000">1,000</a>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <footer class="pa4 black bg-white">
+      <article class=" \pr2 pr0-ns">
+        <p>
+          Copyright © 2017 <a href="/" class="link black dim underline">SpanishPhrases.org</a>. All rights reserved.
+        </p>
+      </article>
+    </footer>
+  </body>
+</html>
