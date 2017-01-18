@@ -4,7 +4,7 @@
   <title>Spanish Phrases</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="tachyons.css"/>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <style>
   aside {
     background-color: #fff;
@@ -13,6 +13,7 @@
   .shadow {
     box-shadow: 6px 0 10px 0 rgba( 0, 0, 0, .2 );
   }
+
   .flex-reverse {
     flex-direction: row-reverse;
   }
@@ -27,16 +28,16 @@
     transition: all .1s cubic-bezier(.77, 0, .175, 1)
   }
   .flip-container {
-		-webkit-perspective: 1000;
-		-moz-perspective: 1000;
-		perspective: 1000;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
 
-		-moz-transform: perspective(1000px);
-		-moz-transform-style: preserve-3d;
-		-ms-transform-style: preserve-3d;
-  	}
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    }
 
-  .flip-container:hover .back, .flip-container.hover .back {
+  /*.flip-container:hover .back, .flip-container.hover .back {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     transform: rotateY(0deg);
@@ -46,36 +47,36 @@
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
-  }
+  }*/
 
-	.flip-container, .front, .back {
+  .flip-container, .front, .back {
     width: 100%;
     height: 10rem;
     margin-bottom: 24px;
     border-radius: .5rem;
-	}
+  }
 
-	.flipper {
-		-webkit-transition: 0.6s;
-		-webkit-transform-style: preserve-3d;
-		-ms-transition: 0.6s;
+  .flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 0.6s;
 
-		-moz-transition: 0.6s;
-		-moz-transform: perspective(1000px);
-		-moz-transform-style: preserve-3d;
-		-ms-transform-style: preserve-3d;
+    -moz-transition: 0.6s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
 
-		transition: 0.6s;
-		transform-style: preserve-3d;
+    transition: 0.6s;
+    transform-style: preserve-3d;
 
-		position: relative;
-	}
+    position: relative;
+  }
 
-	.front, .back {
-		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
-		backface-visibility: hidden;
+  .front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
 
     -webkit-transition: 0.6s;
     -webkit-transform-style: preserve-3d;
@@ -93,44 +94,43 @@
     transform-style: preserve-3d;
     transform: rotateY(0deg);
 
-		position: absolute;
-		top: 0;
-		left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     padding: 2rem;
 
-	}
+  }
 
-	.front {
-		-webkit-transform: rotateY(0deg);
-		-ms-transform: rotateY(0deg);
-		background: #fff;
-		z-index: 2;
-	}
+  .front {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    background: #fff;
+    z-index: 2;
+  }
 
-	.back {
-		background: #fff;
-		-webkit-transform: rotateY(-180deg);
+  .back {
+    background: #fff;
+    -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
-	}
+  }
+
+  .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+  	transform: rotateY(180deg);
+  }
   </style>
   <body class="bg-near-white">
-    <section class="bg-white w-100 pa2">
-      <p class="black tc">
-        Site under construction. 🚧 Thank you for your patience!
-      </p>
-    </section>
     <header class="bg-black w-100 ph3 pv3 ph5-l flex flex-reverse">
-      <a href="#" class="link dim white ml3">
+      <a href="https://twitter.com" class="link dim white ml3">
          <svg class="db w1 h1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/>
          </svg>
       </a>
-      <a href="https://www.facebook.com/spanishphrases/" class="link dim white ml3">
+      <a href="https://www.facebook.com/spanishphrases/" class="link dim white ml3" target="_blank">
           <svg class="db w1 h1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fill-rule="nonzero"/>
           </svg>
         </a>
-      <a href="#" class="link white tc">
+      <a href="/" class="link white tc">
         spanishphrases.org
       </a>
     </header>
@@ -143,8 +143,8 @@
             </a>
           </h1>
           <nav class="f6 fw6 ttu tracked pb4-ns pt4-ns lh-copy flex flex-wrap justify-center">
-            <a class="black-60 hover-white mh3" href="#" title="Home">Home</a>
-            <a class="black-60 hover-white mr3" href="#" title="About">About</a>
+            <a class="black-60 hover-white mh3" href="/" title="Home">Home</a>
+            <a class="black-60 hover-white mr3" href="about.html" title="About">About</a>
             <a class="black-60 hover-white mr3" href="#" title="Learn">Learn</a>
           </nav>
           <p class="f3-ns f4 white tc ma0 ph2 pt3">
@@ -173,7 +173,7 @@
                 <h1 class="f2 bg-black ph4 pv2 white">Questions</h1>
                 <ul class="list pl0">
                   <li>
-                    <button class="f6 br-pill bg-dark-green no-underline washed-green ba b--dark-green grow pv2 ph3" onclick="document.querySelector('#flip-toggle').classList.toggle('hover');">Flip</button>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('hover');">
                       <div class="flip-container" id="flip-toggle">
                     		<div class="flipper">
                     			<div class="front card">
@@ -186,6 +186,7 @@
                     			</div>
                     		</div>
                       </div>
+                    </a>
                   </li>
                   <li>
                     <div class="flip-container">
@@ -249,7 +250,6 @@
                   </li>
                   <li>
                     <div class="flip-container">
-		    <a onclick="document.querySelector('#flip-toggle').classList.toggle('hover');">    
                       <div class="flipper">
                         <div class="front card">
                           <h1 class="f4 f2-l fw7 mt0 light-red">#006</h1>
@@ -260,7 +260,6 @@
                           <b class="f3 mb2">What do you do for work?</b>
                         </div>
                       </div>
-		     </a>
                     </div>
                   </li>
                   <li>
