@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <title>Spanish Phrases</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+  <link rel="stylesheet" href="tachyons.css"/>
   <link rel="stylesheet" href="style.css">
   <style>
   aside {
@@ -173,18 +173,20 @@
                 <h1 class="f2 bg-black ph4 pv2 white">Questions</h1>
                 <ul class="list pl0">
                   <li>
-                    <div class="flip-container">
-                  		<div class="flipper">
-                  			<div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 light-red">#001</h1>
-                          <b class="f3 mb2">¡Hola! ¿Comó estás?</b>
-                  			</div>
-                  			<div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#001</h1>
-                          <b class="f3 mb2">Hello! How are you?</b>
-                  			</div>
-                  		</div>
-                    </div>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('hover');" class="sexyButton">
+                      <div class="flip-container" id="flip-toggle">
+                    		<div class="flipper">
+                    			<div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 light-red">#001</h1>
+                            <b class="f3 mb2">¡Hola! ¿Comó estás?</b>
+                    			</div>
+                    			<div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#001</h1>
+                            <b class="f3 mb2">Hello! How are you?</b>
+                    			</div>
+                    		</div>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <div class="flip-container">
