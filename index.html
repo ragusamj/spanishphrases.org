@@ -4,122 +4,7 @@
   <title>Spanish Phrases</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="tachyons.css"/>
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <style>
-  aside {
-    background-color: #fff;
-    background-image: linear-gradient(#E50606, #E30558);
-  }
-  .shadow {
-    box-shadow: 6px 0 10px 0 rgba( 0, 0, 0, .2 );
-  }
-
-  .flex-reverse {
-    flex-direction: row-reverse;
-  }
-  .card {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-    -webkit-transition: all .1s cubic-bezier(.77, 0, .175, 1);
-    transition: all .1s cubic-bezier(.77, 0, .175, 1)
-  }
-  .card:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
-    -webkit-transition: all .1s cubic-bezier(.77, 0, .175, 1);
-    transition: all .1s cubic-bezier(.77, 0, .175, 1)
-  }
-  .flip-container {
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    perspective: 1000;
-
-    -moz-transform: perspective(1000px);
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    }
-
-  /*.flip-container:hover .back, .flip-container.hover .back {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-
-  .flip-container:hover .front, .flip-container.hover .front {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-  }*/
-
-  .flip-container, .front, .back {
-    width: 100%;
-    height: 10rem;
-    margin-bottom: 24px;
-    border-radius: .5rem;
-  }
-
-  .flipper {
-    -webkit-transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
-    -ms-transition: 0.6s;
-
-    -moz-transition: 0.6s;
-    -moz-transform: perspective(1000px);
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-
-    transition: 0.6s;
-    transform-style: preserve-3d;
-
-    position: relative;
-  }
-
-  .front, .back {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-    -webkit-transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transform: rotateY(0deg);
-
-    -moz-transition: 0.6s;
-    -moz-transform-style: preserve-3d;
-    -moz-transform: rotateY(0deg);
-
-    -ms-transition: 0.6s;
-    -ms-transform-style: preserve-3d;
-    -ms-transform: rotateY(0deg);
-
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    padding: 2rem;
-
-  }
-
-  .front {
-    -webkit-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    background: #fff;
-    z-index: 2;
-  }
-
-  .back {
-    background: #fff;
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-  }
-
-  .flip-container:link .flipper, .flip-container.link .flipper, .flip-container.flip .flipper {
-  	transform: rotateY(180deg);
-  }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <body class="bg-near-white">
     <header class="bg-black w-100 ph3 pv3 ph5-l flex flex-reverse">
       <a href="https://twitter.com" class="link dim white ml3">
@@ -165,7 +50,7 @@
               <b>SpanishPhrases.org</b> was created to help people learn a new language, particularly Spanish or español. The hardest part of remembering the different phrases and spelling of the words is not having a visual to look at from time to time. All feedback is welcomed.
             </p>
             <p class="f6 lh-copy measure">
-              If you have any suggestions for new phrases or words you would like seen on the site, <a href="#" class="black dim">tweet at me</a>.
+              If you have any suggestions for new phrases or words you would like seen on the site, <a href="#" class="black dim">tweet us</a>.
             </p>
           </article>
             <section class="fl w-100 w-50-ns">
@@ -188,8 +73,8 @@
                       </div>
                     </a>
                   </li>
-                  <!-- <li>
-                    <a ontouchstart="this.classList.toggle('active');">
+                  <li>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
                       <div class="flip-container">
                     		<div class="flipper">
                     			<div class="front card">
@@ -208,117 +93,133 @@
                       </div>
                     </a>
                   </li>
-                  <li> -->
-                    <div class="flip-container">
-                  		<div class="flipper">
-                  			<div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-red">#003</h1>
-                          <b class="db f3 mb2">¿De donde eres?</b>
-                  			</div>
-                  			<div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#003</h1>
-                          <b class="f3 mb2">Where are you from?</b>
-                  			</div>
-                  		</div>
-                    </div>
+                  <li>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                    		<div class="flipper">
+                    			<div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-red">#003</h1>
+                            <b class="db f3 mb2">¿De donde eres?</b>
+                    			</div>
+                    			<div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#003</h1>
+                            <b class="f3 mb2">Where are you from?</b>
+                    			</div>
+                    		</div>
+                      </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-red">#004</h1>
-                          <b class="db f3 mb2">¿Dónde está el baño?</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#004</h1>
-                          <b class="f3 mb2">Where is the bathroom?</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-red">#004</h1>
+                            <b class="db f3 mb2">¿Dónde está el baño?</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#004</h1>
+                            <b class="f3 mb2">Where is the bathroom?</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-red">#005</h1>
-                          <b class="db f3 mb2">¿Donde trabajas?</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#005</h1>
-                          <b class="f3 mb2">Where do you work?</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-red">#005</h1>
+                            <b class="db f3 mb2">¿Donde trabajas?</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#005</h1>
+                            <b class="f3 mb2">Where do you work?</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-red">#006</h1>
-                          <b class="db f3 mb2">¿En qué trabajas?</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#006</h1>
-                          <b class="f3 mb2">What do you do for work?</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-red">#006</h1>
+                            <b class="db f3 mb2">¿En qué trabajas?</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#006</h1>
+                            <b class="f3 mb2">What do you do for work?</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-red">#007</h1>
-                          <b class="db f3 mb2">¿Cuanto tiempo has trabajado allí?</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#007</h1>
-                          <b class="f3 mb2">How long have you worked there?</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-red">#007</h1>
+                            <b class="db f3 mb2">¿Cuanto tiempo has trabajado allí?</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#007</h1>
+                            <b class="f3 mb2">How long have you worked there?</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-red">#008</h1>
-                          <b class="db f3 mb2">¿Te gusta trabajar allí?</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#008</h1>
-                          <b class="f3 mb2">Do you enjoy working there?</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-red">#008</h1>
+                            <b class="db f3 mb2">¿Te gusta trabajar allí?</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#008</h1>
+                            <b class="f3 mb2">Do you enjoy working there?</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-red">#009</h1>
-                          <b class="db f3 mb2">¿Cuándo vas a dormir por la noche?</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#009</h1>
-                          <b class="f3 mb2">When do you go to sleep at night?</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-red">#009</h1>
+                            <b class="db f3 mb2">¿Cuándo vas a dormir por la noche?</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#009</h1>
+                            <b class="f3 mb2">When do you go to sleep at night?</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-red">#010</h1>
-                          <b class="db f3 mb2">¿A qué hora te levantas por la mañana?</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#010</h1>
-                          <b class="f3 mb2">What time do you wake up in the morning?</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-red">#010</h1>
+                            <b class="db f3 mb2">¿A qué hora te levantas por la mañana?</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3 flight-red">#010</h1>
+                            <b class="f3 mb2">What time do you wake up in the morning?</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                 </ul>
               </article>
@@ -328,132 +229,151 @@
                 <h1 class="f2 bg-black ph4 pv2 white">Exclamations</h1>
                 <ul class="list pl0">
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#011</h1>
-                          <b class="db f3 mb2">¡Felicitaciones! ¡Feliz cumpleaños!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#011</h1>
-                          <b class="f3 mb2">Congratulations! Happy Birthday!</b>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#012</h1>
-                          <b class="db f3 mb2">¡Por supuesto!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#012</h1>
-                          <b class="f3 mb2">Of course!</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#011</h1>
+                            <b class="db f3 mb2">¡Felicitaciones! ¡Feliz cumpleaños!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#011</h1>
+                            <b class="f3 mb2">Congratulations! Happy Birthday!</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#013</h1>
-                          <b class="db f3 mb2">¡Alguien por favor ayúdame!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#013</h1>
-                          <b class="f3 mb2">Someone please help me!</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#012</h1>
+                            <b class="db f3 mb2">¡Por supuesto!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#012</h1>
+                            <b class="f3 mb2">Of course!</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#014</h1>
-                          <b class="db f3 mb2">¡Llame al médico!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#014</h1>
-                          <b class="f3 mb2">Call a doctor!</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#013</h1>
+                            <b class="db f3 mb2">¡Alguien por favor ayúdame!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#013</h1>
+                            <b class="f3 mb2">Someone please help me!</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#015</h1>
-                          <b class="db f3 mb2">¡Vamos al cine!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#015</h1>
-                          <b class="f3 mb2">Let's go to the movies!</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#014</h1>
+                            <b class="db f3 mb2">¡Llame al médico!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#014</h1>
+                            <b class="f3 mb2">Call a doctor!</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#016</h1>
-                          <b class="db f3 mb2">¡Cállate y bésame ya!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#016</h1>
-                          <b class="f3 mb2">Shut up and kiss me already!</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#015</h1>
+                            <b class="db f3 mb2">¡Vamos al cine!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#015</h1>
+                            <b class="f3 mb2">Let's go to the movies!</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#017</h1>
-                          <b class="db f3 mb2">¡Gracias por darme esta opportunidad!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#017</h1>
-                          <b class="f3 mb2">Thank you for giving me this opportunity!</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#016</h1>
+                            <b class="db f3 mb2">¡Cállate y bésame ya!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#016</h1>
+                            <b class="f3 mb2">Shut up and kiss me already!</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#018</h1>
-                          <b class="db f3 mb2">¡Deberías acompañarnos a cenar esta noche!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#018</h1>
-                          <b class="f3 mb2">You should join us for dinner tonight!</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#017</h1>
+                            <b class="db f3 mb2">¡Gracias por darme esta opportunidad!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#017</h1>
+                            <b class="f3 mb2">Thank you for giving me this opportunity!</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
-                    <div class="flip-container">
-                      <div class="flipper">
-                        <div class="front card">
-                          <h1 class="f4 f2-l fw7 mt0 light-purple">#019</h1>
-                          <b class="db f3 mb2">¡Sí, quiero ir de compras!</b>
-                        </div>
-                        <div class="back card">
-                          <h1 class="f4 f2-l fw7 mt0 mb3">#019</h1>
-                          <b class="f3 mb2">Yes, I want to go shopping!</b>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#018</h1>
+                            <b class="db f3 mb2">¡Deberías acompañarnos a cenar esta noche!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#018</h1>
+                            <b class="f3 mb2">You should join us for dinner tonight!</b>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
+                      <div class="flip-container">
+                        <div class="flipper">
+                          <div class="front card">
+                            <h1 class="f4 f2-l fw7 mt0 light-purple">#019</h1>
+                            <b class="db f3 mb2">¡Sí, quiero ir de compras!</b>
+                          </div>
+                          <div class="back card">
+                            <h1 class="f4 f2-l fw7 mt0 mb3">#019</h1>
+                            <b class="f3 mb2">Yes, I want to go shopping!</b>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a onclick="document.querySelector('#flip-toggle').classList.toggle('link');">
                     <div class="flip-container">
                       <div class="flipper">
                         <div class="front card">
@@ -465,7 +385,7 @@
                           <b class="f3 mb2">Wait, you should go with us to the store!</b>
                         </div>
                       </div>
-                    </section>
+                    </a>
                   </li>
                 </ul>
               </article>
