@@ -1,2 +1,2 @@
-# spanishphrases.org
-SpanishPhrases.org was created to help people learn a new language, particularly Spanish or español.
+# SpanishPhrases.org
+SpanishPhrases.org was created to help people learn a new Spanish.
