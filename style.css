@@ -30,8 +30,8 @@ aside {
 }
 .flip-container, .front, .back {
   width: 100%;
-  height: 10rem;
-  margin-bottom: 24px;
+  height: 12rem;
+  margin-bottom: 1.5rem;
   border-radius: .5rem;
 }
 .flipper {
