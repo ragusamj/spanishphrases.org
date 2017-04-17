@@ -1,13 +1,26 @@
-aside {
-  background-color: #fff;
-  background-image: linear-gradient(#E50606, #E30558);
+h1 {
+  color: #43474B;
+  font-weight: 800;
+  margin: 0;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  color: #747b82;
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: -0.4px;
+  font-weight: 700;
+}
+* {
+  color: #9197A3
+}
+.gradient {
+  background-color: #E50606;
+  background-image: linear-gradient(#FF6B7D, #FD4C74);
 }
 .shadow {
   box-shadow: 6px 0 10px 0 rgba( 0, 0, 0, .2 );
-}
-
-.flex-reverse {
-  flex-direction: row-reverse;
 }
 .card {
   box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
@@ -30,8 +43,7 @@ aside {
 }
 .flip-container, .front, .back {
   width: 100%;
-  height: 12rem;
-  margin-bottom: 1.5rem;
+  height: 18rem;
   border-radius: .5rem;
 }
 .flipper {
@@ -75,6 +87,7 @@ aside {
   top: 0;
   left: 0;
   padding: 2rem;
+  text-align: center;
 }
 .front {
   -webkit-transform: rotateY(0deg);

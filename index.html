@@ -1,193 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<title>Spanish Phrases</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  * {
-    border: 0;
-    box-sizing: inherit;
-    -webkit-font-smoothing: antialiased;
-    font-weight: inherit;
-    margin: 0;
-    outline: 0;
-    padding: 0;
-    text-decoration: none;
-    text-rendering: optimizeLegibility;
-  }
-  html {
-    min-height: 100vh;
-    min-width: 100%;
-    box-sizing: border-box;
-  }
-  body {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    -webkit-font-smoothing: antialiased;
-    font-size: 16px;
-    line-height: 24px;
-    background: #fff;
-    color: #171a21;
-    padding: 0;
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
-  section {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-  }
-  article {
-    position: relative;
-    background-color: #0F015E;
-    background-image: -webkit-radial-gradient(ellipse farthest-corner at top left, #E90000 0%, #E30054 100%);
-    background-image: -moz-radial-gradient(ellipse farthest-corner at top left, #E90000, #E30054);
-    background-image: radial-gradient(ellipse farthest-corner at top left, #E90000 0%, #E30054 100%);
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    align-items: flex-start;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-  }
-  h1 {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-grow: 1;
-    -ms-flex-positive: 1;
-    -webkit-flex-grow: 1;
-    width: 100%;
-    align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    justify-content: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    padding: 2rem;
-    position: relative;
-    z-index: 1;
-  }
-  div {
-    max-width: 360px;
-  }
-  p {
-    color: rgba(255,255,255,.8); /*#171A21*/
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', 'Segoe', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 32px;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-weight: 500;
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 24px;
-  }
-  button {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    background: transparent;
-    border: 2px solid #FFFFFF;
-    border-radius: 8px;
-    padding: 8px;
-    padding-right: 16px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #FFFFFF;
-    transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-  }
-  img {
-    height: 320px;
-    margin-left: 40px;
-    z-index: -1;
-  }
-  h3 {
-    font-size: 2rem;
-    font-weight: 900;
-    color: rgba(255,255,255,1);
-    margin-bottom: 12px;
-  }
-  svg {
-    height: 1.25rem;
-    width: 1.25rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    color: #fff;
-    vertical-align: middle;
-  }
-  span {
-    color: #fff;
-    line-height: 2.2;
-  }
-  a {
-    align-items: center;
-  }
-</style>
-<body>
-  <section>
-    <article>
-      <h1>
-        <div>
-          <h3>SpanishPhrases.Org</h3>
-          <p>
-            We’re almost ready to show you what we’ve been working on.
-          </p>
-          <p>
-            In the meantime, please follow our Facebook page to stay up to date.
-          </p>
-          <button>
-            <a href="https://www.facebook.com/spanishphrases/" target="_blank">
-              <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
-                <path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fill-rule="nonzero"/>
+<html class="sans-serif" lang="en">
+  <meta charset="utf-8">
+  <title>Spanish Phrases</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tachyons.css"/>
+  <link rel="stylesheet" href="style.css">
+  <body class="bg-near-white">
+    <header class="gradient white ph3 pv3 ph5-l flex items-center justify-between">
+      <a href="/" class="f4 fw6 link white">
+        Spanish Phrases
+      </a>
+      <nav>
+        <ul class="list">
+          <li class="dib ph3">
+            <a class="link white dim" href="/about.html">About</a>
+          </li>
+          <li class="dib ph3">
+            <a class="link white dim flex items-center" href="/categories.html">Categories
+              <svg class="ph2" width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>drop-down</title>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <polygon id="drop-down" fill="#FFFFFF" points="6 6 0 0 12 0"></polygon>
+                </g>
               </svg>
-              <span>Like us on Facebook</span>
             </a>
-          </button>
-        </div>
-      </h1>
-    </article>
-  </section>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-93771778-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-</body>
+          </li>
+          <li class="dib ph3">
+            <a class="link white dim" href="/signup.html">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article class="flex flex-column-ns min-vh-100 w-100">
+      <section class="flex flex-auto-ns flex-column pt5-ns">
+        <h1 class="f1 tc">
+          Spanish Phrases
+        </h1>
+        <h2 class="tc">
+          The fastest way to learn Spanish.
+        </h2>
+        <main class="flex-auto ph6">
+            <section>
+              <article class="pa3">
+                <ul class="list pl0 flex flex-row-ns flex-wrap flex-column">
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-001').classList.toggle('link');">
+                      <div class="flip-container" id="flip-001">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                Hello! How are you?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¡Hola! ¿Comó estás?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-002').classList.toggle('link');">
+                      <div class="flip-container" id="flip-002">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                What is your name?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿Cuál es su nombre?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-003').classList.toggle('link');">
+                      <div class="flip-container" id="flip-003">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                Where are you from?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿De donde eres?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-004').classList.toggle('link');">
+                      <div class="flip-container" id="flip-004">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                Where are you from?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿De donde eres?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-005').classList.toggle('link');">
+                      <div class="flip-container" id="flip-005">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                Where is the bathroom?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿Dónde está el baño?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-006').classList.toggle('link');">
+                      <div class="flip-container" id="flip-006">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                Where do you work?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿Donde trabajas?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-007').classList.toggle('link');">
+                      <div class="flip-container" id="flip-007">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                What do you do for work?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿En qué trabajas?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-008').classList.toggle('link');">
+                      <div class="flip-container" id="flip-008">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                How long have you worked there?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿Cuanto tiempo has trabajado allí?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-009').classList.toggle('link');">
+                      <div class="flip-container" id="flip-009">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                Do you enjoy working there?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿Te gusta trabajar allí?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-010').classList.toggle('link');">
+                      <div class="flip-container" id="flip-010">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                When do you go to sleep at night?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿Cuándo vas a dormir por la noche?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a onclick="document.querySelector('#flip-011').classList.toggle('link');">
+                      <div class="flip-container" id="flip-011">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4 pt0">
+                                What time do you wake up in the morning?
+                              </h1>
+                            </blockquote>
+                          </div>
+                          <div class="back card">
+                            <blockquote class="mh1">
+                              <h1 class="mb4">
+                                ¿A qué hora te levantas por la mañana?
+                              </h1>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="w-33-ns w-50-m pa3">
+                    <a href="/categories.html">
+                      <div class="flip-container" id="flip-012">
+                        <div class="flipper">
+                          <div class="front card">
+                            <blockquote class="mh1">
+                              <h2 class="mb4 mt5">
+                                View Next Set of Phrases
+                              </h2>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </article>
+            </section>
+          </article>
+        </main>
+      </section>
+    <footer class="bg-white ph3 pv3 ph5-l flex items-center justify-between">
+      <ul class="list pa0 ma0">
+        <li class="dib pr3">Contact</li>
+        <span>•</span>
+        <li class="dib ph3">FAQ</li>
+        <span>•</span>
+        <li class="dib ph3">Terms of Service</li>
+      </ul>
+      <p>
+        © 2017 <a href="/" class="link dim">SpanishPhrases</a>
+      </p>
+    </footer>
+  </body>
 </html>
